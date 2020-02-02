@@ -24,7 +24,13 @@ if keyword != "clear exif data":
     else:
         print ("Successfully created the directory {}".format(outputPath))
 
-for file in glob.glob("*.png"):
+# To fetch files with .png, .jpg, .jpeg extensions
+extensions = ("*.png", "*.jpg", "*.jpeg")
+filtered_files = []
+for extension in extensions:
+    filtered_files.extend(glob.glob(extension))
+
+for file in filtered_files:
     # To get exif data using pyexiv library we have to create image object
     exiv_image = pyexiv2.Image(file)
 
