@@ -15,13 +15,14 @@ os.chdir(path)
 
 keyword = input("Enter search keyword : ").lower()
 
-outputPath = "%s/output_%s" % (path, keyword)
-try:
-    os.mkdir(outputPath)
-except OSError:
-    print ("Creation of the directory {} failed".format(outputPath))
-else:
-    print ("Successfully created the directory {}".format(outputPath))
+if keyword != "clear exif data":
+    outputPath = "%s/output_%s" % (path, keyword)
+    try:
+        os.mkdir(outputPath)
+    except OSError:
+        print ("Creation of the directory {} failed".format(outputPath))
+    else:
+        print ("Successfully created the directory {}".format(outputPath))
 
 for file in glob.glob("*.png"):
     # To get exif data using pyexiv library we have to create image object
