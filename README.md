@@ -1,6 +1,6 @@
 ## What problem we are trying to solve
 
-In our daily life, we are used to take screenshots. But problem comes when we want to find particular screenshot with some text reference.
+In our daily life, we are used to take screenshots. As result, we ends up having too many screenshots. But problem comes when we want to find particular screenshot with some text reference. We have to go through all screenshots to find that screenshot manually.
 
 ## Solution
 
