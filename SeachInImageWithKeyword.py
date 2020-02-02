@@ -68,3 +68,4 @@ else:
 
 
 # see exiv2’s documentation for a list of valid EXIF tags : https://exiv2.org/tags.html
+# pyexiv2 repository github link : https://github.com/LeoHsiao1/pyexiv2 
