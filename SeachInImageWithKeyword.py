@@ -44,7 +44,7 @@ for file in glob.glob("*.png"):
         # no need to create Image object.
         # TODO : Check the impact of directly passing image name in argument over image object
         text_from_image = pytesseract.image_to_string(pillow_image, lang="eng")
-        text_from_image = text_from_image("\n", "").lower()
+        text_from_image = text_from_image.replace("\n", "").lower()
 
         # TODO : Add text_from_image as dictionary not as direct string for future enhancement
         exif_data['Exif.Photo.UserComment'] = text_from_image
